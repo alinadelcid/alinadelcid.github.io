@@ -1,0 +1,688 @@
+
+        body {
+            margin: 0;
+            font-family: Manrope, sans-serif; /* Personal note: Other Google fonts to try include Inconsolata, Syne Handgloves,Space Grotesk */
+            transition: background-color 0.3s ease; /*this was for dark mode toggle*/
+ 
+        }
+        body.light-mode {
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        body.dark-mode {
+            background-color: #181818;
+            color: #f8f8f8;
+        }
+
+        #theme-toggle{
+            color: #000;
+            background-color: transparent;
+            border: 2px solid #000;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-family: Manrope, sans-serif; /* Personal note: Other Google fonts to try include Inconsolata, Syne Handgloves,Space Grotesk */
+
+        }
+        body.light-mode #theme-toggle {
+            color: #fff;
+            border-color: #fff;
+            font-family: Manrope, sans-serif; /* Personal note: Other Google fonts to try include Inconsolata, Syne Handgloves,Space Grotesk */
+            font-weight: 500;
+
+        }
+
+        mark { /*This CSS is for the highlighting thing!*/ 
+          --color1: #BCE7E7;
+          --color2: #BCE7E7;
+          --bg-height: 40%;
+
+          all: unset;
+          background-image: linear-gradient(var(--color1), var(--color2));
+          background-position: 0 100%;
+          background-repeat: no-repeat;
+          background-size: 0 var(--bg-height);
+          animation: highlight 800ms 1 ease-out;
+          animation-fill-mode: forwards;
+          animation-play-state: paused;
+        }
+
+
+        @keyframes highlight {/*This CSS is for the highlighting thing!*/ 
+          to {
+            background-size: 100% var(--bg-height);
+          }
+        }
+
+
+        h2, h3 {
+            font-weight: 500;
+        }
+    
+        h4 {
+
+           font-weight: 400;     
+           color: #5c5c5c;
+           letter-spacing: 1px;
+           margin-top: -15px;    
+        }
+
+        p{
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        
+        /*.textWidth {
+            
+            max-width: 75ch; 
+            margin-left: auto; 
+            margin-right: auto; 
+            text-align: justify; 
+            padding: 0 20px; 
+            
+        }
+
+        .textWidth {
+            
+            max-width: 80ch;
+        }*/
+        
+     /*   .cursor {
+            position: fixed; 
+            width: 15px; 
+            height: 15px;
+            border-radius: 50%;
+            background-color: black; 
+            transform: translate(-50%, -50%); To put it on the center of the cursor
+            transition: width 0.3s, height 0.3s;
+            pointer-events: none;    /* So the JS can work properly
+        }
+
+        * {
+            cursor: none; /*Cursor is now invisible! ahhhh!!
+        }
+
+        .hover-cursor {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            transition: width 0.5s height 0.5s;
+        }*/
+
+        #navbar {
+            /*background-color: #d7d7d7;  Navbar background color 
+            padding: 27px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; */
+             position:fixed;
+             top:0;
+             left:0;
+             width:100%;
+             text-align:right;
+             height:80px; /*Define a height for NavBar*/
+             transition: 0.5s; /*and a transition time for a smooth appearence*/
+             padding-top: 35px;
+             z-index: 1;
+        }
+        #navbar-logo {
+            /*margin-left: 50px;
+            overflow: hidden;*/
+            position: absolute;
+            top: 15px;
+            left: 50px;
+            padding-bottom: 0px;
+            
+            
+
+        }
+  
+        #navbar a {
+            color: #000; /* Link color */
+            text-decoration: none;
+            transition: 0.5s;
+            font-size: 17px;
+  
+        }
+        
+        #navbar a:hover{
+          
+            color: #5c5c5c; /* Link color */
+
+            
+        }
+
+
+        .navlink {
+            margin-right: 70px;            
+        }
+        
+
+        #movingText1  span {  /* This is for animated hero section text */
+            opacity: 0;
+            position: relative;
+            top: -20px;
+            display: inline-block;
+            animation: floatIn 0.5s forwards;
+            line-height: 
+        }
+        
+        #movingText2  span {  /* This is for animated hero section text */
+            opacity: 0;
+            position: relative;
+            top: -20px;
+            display: inline-block;
+            animation: floatIn 0.5s forwards;
+        }
+
+        @keyframes floatIn { /* This is for animated hero section text */
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-section {
+            /*background-color: #f0f0f0;  Background color */
+            padding: 170px 0; /* Adjust top and bottom padding. Was 170px or 230px */
+            text-align: center;
+            max-width: 100%; /* Full-width hero section */
+        }
+        .hero-content {
+            max-width: 80ch;
+            margin: 0 auto;
+            padding-bottom: 100px;
+            text-align: justify;
+
+        }
+        .hero-section h1 {
+            font-size: 90px;
+            line-height: 109px;
+            margin-top: 150px;
+            margin-bottom: -10px;
+        }
+        .hero-section h2 {
+            padding-top: 20px;
+            font-size: 21px;
+            line-height: 31.5px;
+        }
+
+
+
+
+        .email-button {
+            
+            color: #000;
+            background-color: transparent;
+            border: 2px solid #000;
+            border-radius: 5px;
+            padding: 10px 25px;
+            cursor: pointer;
+            font-family: Manrope, sans-serif; /* Personal note: Other Google fonts to try include Inconsolata, Syne Handgloves,Space Grotesk */
+            font-size: 16px;
+        }
+
+        .email-button:hover {
+            background-color: #f8f8f8; /* Button background color on hover */
+            border: 2px solid #808080;
+            color: #808080;
+        }
+
+
+
+
+
+
+        .animation { /* This is for the portfolio-section animation as you scroll down */
+            opacity: 0;
+            transform: translateY(400px);
+            transition: all 0.2s ease-out;
+            transition-delay: 0.2s;
+        }
+
+       .scroll-animation {/* This is for the portfolio-section animation as you scroll down */
+            opacity: 1;
+            transform: translateY(0);
+        }
+       #portfolio {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 60px auto;
+            max-width: 1200px;
+        }
+  
+        
+
+        .portfolio-item {
+            width: calc(50% - 20px); /*maybe this can count as a calculation lol?*/
+            margin-bottom: 40px;
+            text-align: center;
+            margin: 0 10px; /* Add margin to all sides */
+        }
+        .portfolio-item img {
+            width: 100%;
+            border-radius: 5px;        
+            transition: box-shadow .3s;
+            position: relative;
+            top: 0;
+            transition: top ease 0.5s;
+        }
+
+        .portfolio-item img:hover{
+              box-shadow: 0 0 11px rgba(33,33,33,.2);
+              top: -10px;
+
+        }
+        .portfolio-item h2 {
+           text-align: left;           
+           font-weight: 700;     
+
+                                                
+        }
+        .portfolio-item p {
+            text-align: left;
+            margin-top: -10px;
+            padding-bottom:  55px;
+        }
+
+
+
+    .body-wrapper-fade
+    {
+
+        opacity:0;   /*This is for the portfolio pages body fade-in anaimation*/
+    }
+
+        
+        .body-wrapper
+{
+    /* ORIGINAL CODE opacity:0;*/                                  /*EXPERIMENTING HERE*/
+    
+    margin: auto; 
+    max-width: 950px;
+    
+    padding-left: 70px;   /*ADDED PADDING HERE SO NOW REMOVE PADDING FROM TEXT BLOCKS AND IMAGES*/
+    padding-right: 70px;
+    
+}
+
+        .about-page-text{
+    
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80ch;
+            text-align: justify;
+            padding-top: 110px;
+            padding-left: 70px;
+            padding-right: 70px;
+            margin-bottom: 310px;
+    
+        }   
+    
+        .top-page-text { /*For the title texts at top portfolio pages*/
+            
+          /*  ORIGINAL CODE
+            
+            margin-top: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80ch;
+            text-align: justify;
+            padding-top: 30px;
+            padding-left: 70px;
+            padding-right: 70px;
+            margin-bottom: -5px;*/
+            
+            
+            margin-top: 150px;
+            margin-bottom: -5px;
+            max-width: 80ch;
+            text-align: justify;
+           
+    
+        }
+
+     
+        .detail-column {
+            float: left;
+            width: 25%;
+            padding-right: 15px;
+            margin-right: 23px;
+        }
+
+        /* Clearfix for columns */
+        .detail-row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+     
+        .detailsBlock {
+            margin-top: 25px;
+            margin-left: auto; 
+            margin-right: auto; 
+            max-width: 80ch;
+            padding-top: 30px;
+            /*padding-left: 70px; ORIGINAL CODE*/
+            /*padding-right: 70px; ORIGINAL CODE*/
+            margin-bottom: 25px;
+            
+        }
+
+
+        .detail-content {
+
+            margin-bottom: 20px;
+        }
+
+        .detail-headline {
+
+           font-weight: 700;     
+           color: #5c5c5c;
+           letter-spacing: 1px;
+           margin-bottom: 10px;  
+
+        }
+
+
+        .detail-subtitle {
+
+           color: #5c5c5c; 
+
+        }
+
+        .content-wrapper{ /*This is the wrapper around portfolio page content/text/pics except header area*/
+
+            margin-top: 50px;
+            margin-bottom: 100px;
+        }
+
+        .body-label {
+            
+           font-weight: 700;     
+           color: #157E7D;
+           letter-spacing: 1px;
+           margin-bottom: 10px;  
+    
+        }
+        .body-h1 {
+
+            margin-top: 0px;
+            margin-bottom: 25px;
+            font-size: 25px;
+
+        }
+
+
+       .introTextBlock  {
+            
+            margin-top: 25px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80ch;
+            text-align: left;
+            padding-top: 30px;
+            /*padding-left: 70px;
+            padding-right: 70px;*/
+            margin-bottom: 120px;
+        }
+        .introTextBlock p {
+
+            line-height: 25px;            
+    
+        }
+
+        .centeredTextBlock {
+            
+            margin-top: 25px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80ch;
+            text-align: justify;
+            padding-top: 30px;
+            /*padding-left: 70px;
+            padding-right: 70px;*/
+            margin-bottom: 90px;
+        }
+        .centeredTextBlock {
+
+            line-height: 25px;
+            
+        }
+
+        .textBlock {    /*LEFT ALIGNED TEXT BLOCK IN BODY PORTFOLIO PAGES*/
+            
+            margin-top: 25px;
+            max-width: 80ch;
+            text-align: justify;
+            padding-top: 30px;
+            /*padding-left: 70px;
+            padding-right: 70px;
+            margin-bottom: 90px;*/
+        }
+        .textBlock p {
+
+            line-height: 25px;
+        }
+
+                                                .body-br{ /*compatible <br> edits with all browsers???*/
+
+                                                 content: "";
+                                                  display: block;
+                                                  font-size: 80%;
+                                                  height: 1em;
+
+                                                }
+        
+        .image { /*This gives the spacing around the image*/
+            
+            /*margin-left: auto;
+            margin-right: auto;
+            max-width: 80ch;
+            text-align: justify;
+            padding-top: 30px;
+            padding-left: 70px;
+            padding-right: 70px;
+            padding-bottom: 0px;  ORIGINAL CODE */
+            
+            padding-top: 10px;
+            text-align: justify;            
+            
+        }
+
+        .image img{ /*This makes the image fit inside the div, for header images*/
+
+            height: 100%;
+            width: 100%; 
+        }
+
+        .body-image {/*This gives the spacing around the body image*/
+    
+           /* margin-left: auto;
+            margin-right: auto;
+            max-width: 80ch;
+            padding-top: 13px; I changed this according to section with no <p> ..... */
+                        
+            padding-top: 13px; 
+            margin-bottom: 90px;
+            text-align: center;
+          }
+
+        .body-image img{ /*This makes the image fit inside the div, for body images*/
+
+            height: 100%;
+            width: 100%;  
+            margin-bottom: 10px;
+        }
+
+
+        .contact-form {
+            
+            margin-bottom: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80ch;
+
+            text-align: justify;
+            padding: 30px 70px; /* 30px top/bottom padding!!! */
+            
+            /*max-width: 800px;  Makes text abt 65~70ch smaller width
+            margin: 0 auto; */
+        }
+
+        .contact-form input[type="text"],
+        .contact-form input[type="email"], 
+        .contact-form textarea {
+            width: 100%; 
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 15px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .pagination {
+            text-align: center;
+        }
+
+        .pagination button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            margin-left: 10px; /* Add margin between the buttons */
+            margin-right: 10px;
+            margin-bottom: 0px; /*used to be 100px*/
+        }
+
+        .pagination h1 {
+
+            margin: 0;
+        }
+
+        .pagination span {
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+         #footer {
+
+                margin-top: 0px;  /*used to be 25px*/
+                margin-left: auto;
+                margin-right: auto;
+                max-width: 1200px;
+                text-align: center;
+                padding-top: 20px;
+                padding-left: 70px;
+                padding-right: 70px;
+                margin-bottom: 55px;
+        }
+
+        #footer a {
+
+            text-decoration: none;
+            color: black;
+        }
+
+        #footer a:visited {
+
+            text-decoration: none;
+            color: black;
+        }
+
+
+        /* Responsive styles */
+
+
+
+        @media (max-width: 1226px) {
+            .hero-content {
+                padding: 0 20px;
+            }
+            #portfolio {
+                width: 100%;
+             
+
+            }
+        }
+    
+
+
+        @media (max-width: 1225px) {
+            .hero-content {
+                padding: 0 20px;
+            }
+            #portfolio {
+                width: 95%;
+             
+
+            }
+        }
+    
+
+
+
+        @media (max-width: 875px) {
+            .hero-content {
+                padding: 0 45px;
+            }
+            #portfolio {
+             
+
+            }
+        }
+    
+
+
+        @media (max-width: 768px) {
+            .block-of-text,
+            .contact-form {
+                padding: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 0 45px;
+            }
+            .portfolio-item {
+                width: 100%;
+                margin-left: 20px; /* Remove left margin for smaller screens */
+                margin-right: 20px; /* Remove right margin for smaller screens */
+            }
+        }
+    
+
+   /* Responsive layout */
+        @media screen and (max-width: 768px) {
+            .column {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .column {
+                width: 100%;
+            }
+        }
