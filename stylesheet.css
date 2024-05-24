@@ -712,7 +712,7 @@
     
 
 
-                                        
+/*------------------------------------------------------------------ */                       
 
         @media (max-width: 1025px) { /* big landscape tablets, laptops, and desktops */
             .hero-content {
@@ -731,7 +731,7 @@
     
 
 
-
+/*------------------------------------------------------------------ */      
 
         @media (max-width: 801px) { /* tablet, landscape iPad, lo-res laptops ands desktops */
             .hero-content {
@@ -774,7 +774,7 @@
 
 
 
-
+/*------------------------------------------------------------------ */      
 
                         @media (max-width: 792px) { /* Smallest browser size!!! I made this lol */
                             .hero-content {
@@ -827,11 +827,11 @@
 
 
 
-
+/*------------------------------------------------------------------ */      
 
         @media (max-width: 600px) { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
              .hero-content {
-                padding: 0 40px;
+                padding: 0 50px;
             }
             portfolio {
                 width: 90%;
@@ -850,8 +850,8 @@
             max-width: 80ch;
             text-align: left;
             padding-top: 110px;
-            padding-left: 50px;
-            padding-right: 50px;
+            padding-left: 5px;
+            padding-right: 5px;
             margin-bottom: 310px;
             }         
               .body-wrapper /*!!! body wrapping around portfolio pages content !!!*/
@@ -868,7 +868,7 @@
 
 
 
-
+/*------------------------------------------------------------------ */      
 
         @media (max-width: 480px) { /* smartphones, Android phones, landscape iPhone */
             .hero-content {
@@ -894,14 +894,14 @@
             
 
             .about-page-text {
-            margin-top: 100px;
+              margin-top: 100px;
             margin-left: auto;
             margin-right: auto;
             max-width: 80ch;
             text-align: left;
             padding-top: 110px;
-            padding-left: 40px;
-            padding-right: 40px;
+            padding-left: 0px;
+            padding-right: 0px;
             margin-bottom: 310px;
             }
             
@@ -924,7 +924,7 @@
         }
     
 
-
+/*------------------------------------------------------------------ */      
 
         @media (max-width: 320px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
             .hero-content {
@@ -951,14 +951,14 @@
             
      
             .about-page-text {
-            margin-top: 100px;
+         margin-top: 100px;
             margin-left: auto;
             margin-right: auto;
             max-width: 80ch;
             text-align: left;
             padding-top: 110px;
-            padding-left: 30px;
-            padding-right: 30px;
+            padding-left: 0px;
+            padding-right: 0px;
             margin-bottom: 310px;
             }
             
@@ -985,7 +985,7 @@
 
 
 
-
+/*------------------------------------------------------------------ */      
 
 
 
