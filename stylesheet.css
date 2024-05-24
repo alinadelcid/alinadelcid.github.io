@@ -610,9 +610,18 @@
             font-size: 24px; /* Adjust font size as needed */
             display: flex;
             align-items: center; /* Center the text and arrows vertically */
-            text-decoration: none !important;
+            color: inherit; /* Inherit color from parent */
 
         }
+
+
+                        /* TO GET RID OF UGLY DEFAULT BLUE BUTTONS IN MOBILE VIEW */
+
+                                            .pagination button h1 { 
+                            color: #000; /* Set the text color explicitly to black or any desired color */
+                            font-family: inherit; /* Inherit font family from parent */
+                            text-decoration: none;
+                        }
 
         .pagination span {
             font-weight: bold;
@@ -620,20 +629,19 @@
             margin: 0 5px; /* Add space between text and arrow */
         }
 
-#prevProject{
-    
-    text-decoration: none !important;
-
-}
-
-#nextProject{
-    
-    text-decoration: none !important;
-
-}
 
 
 
+                        /* TO GET RID OF UGLY DEFAULT BLUE BUTTONS IN MOBILE VIEW */
+
+                                        .pagination button:focus, .pagination button:active {
+                            outline: none; /* Remove the default focus outline */
+                        }
+
+                        .pagination button:focus h1, .pagination button:active h1 {
+                            color: #000; /* Set focus/active state color explicitly */
+                            text-decoration: none; /* Remove underline on focus/active */
+                        }
 
 
 
