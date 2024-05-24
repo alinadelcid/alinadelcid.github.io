@@ -166,7 +166,6 @@
             top: -20px;
             display: inline-block;
             animation: floatIn 0.5s forwards;
-            line-height: 
         }
         
         #movingText2  span {  /* This is for animated hero section text */
@@ -198,19 +197,19 @@
             max-width: 80ch;
             margin: 0 auto;
             padding-bottom: 100px;
-            text-align: justify;
+            text-align: left;
 
         }
         .hero-section h1 {
             font-size: 90px;
-            line-height: 109px;
+            line-height: 100px;
             margin-top: 150px;
             margin-bottom: -10px;
         }
         .hero-section h2 {
             padding-top: 20px;
             font-size: 21px;
-            line-height: 31.5px;
+            line-height: 33px;
         }
 
 
@@ -257,13 +256,26 @@
             margin: 60px auto;
             max-width: 1200px;
         }
-  
-        
+                                                        .tag { /* This is for the portfolio tags on home page */
+                                                            display: inline-block;
+                                                            padding: 5px 10px;
+                                                            background-color: #F0F0F0; /* Tag background color */
+                                                            color: #303030; /* Tag text color */
+                                                            border-radius: 5px; /* Rounded corners */
+                                                            font-size: 14px; /* Tag text size */
+                                                            margin-top: 10px; /* Spacing between tag and img */
+                                                            margin-right: 7px;
+                                                            margin-bottom: 3px;
+                                                            
+                                                            letter-spacing: 1px;
+                                                            font-weight: 400;     
+       
+                                                        }
 
         .portfolio-item {
             width: calc(50% - 20px); /*maybe this can count as a calculation lol?*/
             margin-bottom: 40px;
-            text-align: center;
+            text-align: left;
             margin: 0 10px; /* Add margin to all sides */
         }
         .portfolio-item img {
@@ -282,7 +294,7 @@
         }
         .portfolio-item h2 {
            text-align: left;           
-           font-weight: 700;     
+           font-weight: 700; 
 
                                                 
         }
@@ -290,6 +302,7 @@
             text-align: left;
             margin-top: -10px;
             padding-bottom:  55px;
+            line-height: 25px;
         }
 
 
@@ -319,7 +332,7 @@
             margin-left: auto;
             margin-right: auto;
             max-width: 80ch;
-            text-align: justify;
+            text-align: left;
             padding-top: 110px;
             padding-left: 70px;
             padding-right: 70px;
@@ -345,9 +358,15 @@
             margin-top: 150px;
             margin-bottom: -5px;
             max-width: 80ch;
-            text-align: justify;
+            text-align: left;
            
     
+        }
+
+
+        #third-detail-column {
+
+            margin-right: 0px;
         }
 
      
@@ -447,7 +466,7 @@
             margin-left: auto;
             margin-right: auto;
             max-width: 80ch;
-            text-align: justify;
+            text-align: left;
             padding-top: 30px;
             /*padding-left: 70px;
             padding-right: 70px;*/
@@ -463,7 +482,7 @@
             
             margin-top: 25px;
             max-width: 80ch;
-            text-align: justify;
+            text-align: left;
             padding-top: 30px;
             /*padding-left: 70px;
             padding-right: 70px;
@@ -532,7 +551,7 @@
             margin-right: auto;
             max-width: 80ch;
 
-            text-align: justify;
+            text-align: left;
             padding: 30px 70px; /* 30px top/bottom padding!!! */
             
             /*max-width: 800px;  Makes text abt 65~70ch smaller width
@@ -563,7 +582,51 @@
             background-color: #555;
         }
 
+
+
+
+
+
+
         .pagination {
+            display: flex;
+            justify-content: center; /* Center the buttons horizontally */
+            align-items: center; /* Center the buttons vertically */
+            flex-wrap: nowrap; /* Ensure the buttons stay on the same line */
+            margin-bottom: 20px; /* Adjust as needed */
+        }
+
+        .pagination button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            margin-left: 25px;
+            margin-right: 25px;/* Remove margin to use gap instead */
+            padding: 10px 20px; /* Add padding for better touch target on mobile */
+        }
+
+        .pagination h1 {
+            margin: 0;
+            font-size: 24px; /* Adjust font size as needed */
+            display: flex;
+            align-items: center; /* Center the text and arrows vertically */
+        }
+
+        .pagination span {
+            font-weight: bold;
+            font-size: 24px;
+            margin: 0 5px; /* Add space between text and arrow */
+        }
+
+
+
+
+
+
+
+
+
+       /* .pagination {
             text-align: center;
         }
 
@@ -571,9 +634,9 @@
             border: none;
             background-color: transparent;
             cursor: pointer;
-            margin-left: 10px; /* Add margin between the buttons */
+            margin-left: 10px;  Add margin between the buttons 
             margin-right: 10px;
-            margin-bottom: 0px; /*used to be 100px*/
+            margin-bottom: 20px; used to be 100px
         }
 
         .pagination h1 {
@@ -584,7 +647,7 @@
         .pagination span {
             font-weight: bold;
             font-size: 24px;
-        }
+        }*/
 
          #footer {
 
@@ -593,7 +656,7 @@
                 margin-right: auto;
                 max-width: 1200px;
                 text-align: center;
-                padding-top: 20px;
+                padding-top: 10px;
                 padding-left: 70px;
                 padding-right: 70px;
                 margin-bottom: 55px;
@@ -612,69 +675,310 @@
         }
 
 
-        /* Responsive styles */
+
+
+/*--------------------------------- Responsive styles --------------------------------- */
 
 
 
-        @media (max-width: 1226px) {
+        @media (max-width: 1281px) { /* hi-res laptops and desktops */
             .hero-content {
-                padding: 0 20px;
+                padding: 0 75px;
+            }
+            #portfolio {
+                width: 90%;
+            }
+                  
+        .body-wrapper
+            {
+            margin: auto; 
+            max-width: 950px;
+            padding-left: 70px;   /* Original is 70px */
+            padding-right: 70px;
+            }
+
+                }
+    
+
+
+                                        
+
+        @media (max-width: 1025px) { /* big landscape tablets, laptops, and desktops */
+            .hero-content {
+                padding: 0 65px;
+            }
+            #portfolio {
+                width: 90%;
+            }
+            .body-wrapper
+            {
+            margin: auto; 
+            padding-left: 70px;   
+            padding-right: 70px;
+            }
+        }
+    
+
+
+
+
+        @media (max-width: 801px) { /* tablet, landscape iPad, lo-res laptops ands desktops */
+            .hero-content {
+                padding: 0 55px;
+            }
+            #portfolio {
+
+
+            }
+            
+            
+            .about-page-text {
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80ch;
+            text-align: left;
+            padding-top: 110px;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin-bottom: 310px;
+            }         
+              .body-wrapper /*!!! body wrapping around portfolio pages content !!!*/
+            {
+                margin: auto; 
+                max-width: 950px;
+                padding-left: 100px;   
+                padding-right: 100px;
+            }
+            
+              .column {
+                width: 50%;
+            }
+            
+        }
+    
+
+
+
+
+
+
+
+
+                        @media (max-width: 792px) { /* Smallest browser size!!! I made this lol */
+                            .hero-content {
+                                padding: 0 60px;
+                            }
+                            #portfolio {
+
+                            }
+                            .portfolio-item {
+                                width: 100%;
+                                margin-left: 20px; /* Remove left margin for smaller screens */
+                                margin-right: 20px; /* Remove right margin for smaller screens */
+                            } 
+
+
+                            .about-page-text {
+                            margin-top: 100px;
+                            margin-left: auto;
+                            margin-right: auto;
+                            max-width: 80ch;
+                            text-align: left;
+                            padding-top: 110px;
+                            padding-left: 40px;
+                            padding-right: 40px;
+                            margin-bottom: 310px;
+                            }
+
+                              .body-wrapper /*!!! body wrapping around portfolio pages content !!!*/
+                            {
+                                margin: auto; 
+                                max-width: 950px;
+                                padding-left: 40px;   
+                                padding-right: 40px;
+                            }
+                            .column {
+                                width: 100%;
+                            }
+
+                        .pagination button {
+
+                                 padding: 10px 20px; 
+
+                            }
+                        }
+    
+
+
+
+
+
+
+
+
+
+        @media (max-width: 600px) { /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+             .hero-content {
+                padding: 0 40px;
+            }
+            portfolio {
+                width: 90%;
+            }       
+             .portfolio-item {
+                width: 100%;
+                margin-left: 20px; /* Remove left margin for smaller screens */
+                margin-right: 20px; /* Remove right margin for smaller screens */
+            } 
+            
+            
+            .about-page-text {
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80ch;
+            text-align: left;
+            padding-top: 110px;
+            padding-left: 50px;
+            padding-right: 50px;
+            margin-bottom: 310px;
+            }         
+              .body-wrapper /*!!! body wrapping around portfolio pages content !!!*/
+            {
+                margin: auto; 
+                max-width: 950px;
+                padding-left: 50px;   
+                padding-right: 50px;
+            }
+        }
+    
+
+
+
+
+
+
+
+        @media (max-width: 480px) { /* smartphones, Android phones, landscape iPhone */
+            .hero-content {
+                padding: 0 40px;
+            }
+            .hero-section h1 {
+                 font-size: 70px;
+                 line-height: 80px;
+            }
+            .hero-section h2 {
+                 font-size: 19px;
+                 line-height: 31px;
             }
             #portfolio {
                 width: 100%;
-             
 
-            }
-        }
-    
-
-
-        @media (max-width: 1225px) {
-            .hero-content {
-                padding: 0 20px;
-            }
-            #portfolio {
-                width: 95%;
-             
-
-            }
-        }
-    
-
-
-
-        @media (max-width: 875px) {
-            .hero-content {
-                padding: 0 45px;
-            }
-            #portfolio {
-             
-
-            }
-        }
-    
-
-
-        @media (max-width: 768px) {
-            .block-of-text,
-            .contact-form {
-                padding: 40px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero-content {
-                padding: 0 45px;
             }
             .portfolio-item {
                 width: 100%;
                 margin-left: 20px; /* Remove left margin for smaller screens */
                 margin-right: 20px; /* Remove right margin for smaller screens */
+            } 
+            
+
+            .about-page-text {
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80ch;
+            text-align: left;
+            padding-top: 110px;
+            padding-left: 40px;
+            padding-right: 40px;
+            margin-bottom: 310px;
+            }
+            
+              .body-wrapper /*!!! body wrapping around portfolio pages content !!!*/
+            {
+                margin: auto; 
+                max-width: 950px;
+                padding-left: 40px;   
+                padding-right: 40px;
+            }
+            .column {
+                width: 100%;
+            }
+            
+        .pagination button {
+                
+                 padding: 10px 20px; 
+
             }
         }
     
 
-   /* Responsive layout */
+
+
+        @media (max-width: 320px) { /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+            .hero-content {
+                padding: 0 20px;
+            }
+            .hero-section h1 {
+                 font-size: 70px;
+                 line-height: 80px;
+            }
+            .hero-section h2 {
+                 font-size: 19px;
+                 line-height: 31px;
+            }
+            #portfolio {
+                width: 100%;
+            
+            }
+ 
+            .portfolio-item {
+                width: 100%;
+                margin-left: 20px; /* Remove left margin for smaller screens */
+                margin-right: 20px; /* Remove right margin for smaller screens */
+            } 
+            
+     
+            .about-page-text {
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80ch;
+            text-align: left;
+            padding-top: 110px;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-bottom: 310px;
+            }
+            
+            .body-wrapper /*!!! body wrapping around portfolio pages content !!!*/
+            {
+                margin: auto; 
+                max-width: 950px;
+                padding-left: 30px;   
+                padding-right: 30px;
+            }
+            
+            .pagination button {
+                
+                padding: 0px 0px;
+
+            }
+       
+          
+        }
+    
+
+
+
+
+
+
+
+
+
+
+   /* Responsive layout ?????????????????? i think for details columns----------------- 
         @media screen and (max-width: 768px) {
             .column {
                 width: 50%;
@@ -686,3 +990,88 @@
                 width: 100%;
             }
         }
+
+    Responsive layout ?????????????????? ----------------- */
+
+
+
+
+
+
+
+
+
+ /* ORIGINAL STUFF
+
+        @media (max-width: 875px) {
+            .hero-content {
+                padding: 0 45px;
+            }
+            #portfolio {
+
+            }
+            
+            .about-page-text {
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80ch;
+            text-align: left;
+            padding-top: 110px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-bottom: 310px;
+            }
+        }
+    
+
+
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 0 45px;
+            }
+            .portfolio-item {
+                width: 100%;
+                margin-left: 20px; 
+                margin-right: 20px; 
+            }
+            
+             .about-page-text {
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80ch;
+            text-align: left;
+            padding-top: 110px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 310px;
+            }
+        }
+    
+
+
+
+
+
+
+        @media (max-width: 624px) {     Smallest web browser window 
+            .about-page-text {
+            margin-top: 100px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 80ch;
+            text-align: left;
+            padding-top: 110px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 310px;
+            }
+            
+            
+            
+          
+            
+        } */
+    
+
