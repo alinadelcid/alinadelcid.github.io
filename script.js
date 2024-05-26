@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const textArray = ["I'm a multidisciplinary designer with a focus on visual and product design. I value creating thoughtful, delightful ideas for target audiences."];
+    const textArray = ["I'm a multidisciplinary designer with a focus on graphic and UX/UI design. I value creating human-centered designs through a thoughtful and iterative process ☺"];
     const textElement = document.getElementById("movingText2");
 
     for (let i = 0; i < textArray.length; i++) {
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /* _________________________________________________________
 
-USING CONDITIONAL STATEMENT: If Statement for portfolio-section animation in screen window
+USING CONDITIONAL STATEMENT: If Statement for portfolio-section animation in screen window NOT USING ANYMORE!!!!! "css -> portfolio-animation delete it, im using body-wrapper-fade now
 _____________________________________________________________*/ 
 
 const the_animation = document.querySelectorAll('.animation');
@@ -134,7 +134,7 @@ the_animation.forEach((element) => {
 USING 1 OUT OF 3 EVENT HANDLERS and if/else statement: Hiding NavBar as you scroll
 _____________________________________________________________*/  
 
-var lastScrollTop; // This variable will store the top position
+/*var lastScrollTop; // This variable will store the top position
   navbar = document.getElementById('navbar'); // Get the navbar
   window.addEventListener('scroll',function(){  //on every scroll this funtion will be called
   var scrollTop = window.pageYOffset || document.documentElement.scrollTop;   //This line will get the location on scroll
@@ -149,7 +149,25 @@ var lastScrollTop; // This variable will store the top position
   }
   
   lastScrollTop = scrollTop; //New position stored
+});*/
+
+var lastScrollTop = 0; // Initialize lastScrollTop
+var navbar = document.getElementById('navbar'); // Get the navbar
+
+window.addEventListener('scroll', function() {
+    var scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Get the location on scroll
+    
+    if (scrollTop === 0) { // If the user is at the top of the page
+        navbar.style.top = '0'; // Ensure the navbar is visible
+    } else if (scrollTop > lastScrollTop) { // If scrolling down
+        navbar.style.top = '-80px'; // Hide the navbar
+    } else { // If scrolling up
+        navbar.style.top = '0'; // Show the navbar
+    }
+    
+    lastScrollTop = scrollTop; // Update lastScrollTop
 });
+
 
 
 
