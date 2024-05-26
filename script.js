@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const textArray = ["I'm a multidisciplinary designer with a focus on graphic and UX/UI design. I value creating human-centered designs through a thoughtful and iterative process ☺"];
+    const textArray = ["I'm a multidisciplinary designer with a focus on graphic and UX/UI design. I value creating human-centered designs through a thoughtful and iterative process \u263A"];
     const textElement = document.getElementById("movingText2");
 
     for (let i = 0; i < textArray.length; i++) {
