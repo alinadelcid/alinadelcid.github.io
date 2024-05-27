@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const textArray = ["I'm a multidisciplinary designer with a focus on graphic and UX/UI design. I value creating human-centered designs through a thoughtful and iterative process \u263A"];
+    const textArray = ["I'm a multidisciplinary designer with a focus on graphic and UX/UI design. I value creating human-centered designs through a thoughtful and iterative process."];
     const textElement = document.getElementById("movingText2");
 
     for (let i = 0; i < textArray.length; i++) {
@@ -372,6 +372,19 @@ $(document).ready(function() {
     });
 });
 
+
+
+/* _________________________________________________________
+
+   Lazy Load Images 
+_____________________________________________________________*/  
+
+  $(function() {
+    $("img.lazy").lazyload({
+      effect: "show", // You can use other effects like "show", "fadeIn", etc.
+      threshold: 500 // This defines how many pixels before the viewport the image should start loading
+    });
+  });
 
 
 
