@@ -134,22 +134,6 @@ the_animation.forEach((element) => {
 USING 1 OUT OF 3 EVENT HANDLERS and if/else statement: Hiding NavBar as you scroll
 _____________________________________________________________*/  
 
-/*var lastScrollTop; // This variable will store the top position
-  navbar = document.getElementById('navbar'); // Get the navbar
-  window.addEventListener('scroll',function(){  //on every scroll this funtion will be called
-  var scrollTop = window.pageYOffset || document.documentElement.scrollTop;   //This line will get the location on scroll
-      
-  if(scrollTop > lastScrollTop){ //if it will be greater than the previous
-      
-    navbar.style.top='-80px';  //set the value to the negetive of height of navbar 
-  }
-      
-  else{
-    navbar.style.top='0';
-  }
-  
-  lastScrollTop = scrollTop; //New position stored
-});*/
 
 var lastScrollTop = 0; // Initialize lastScrollTop
 var navbar = document.getElementById('navbar'); // Get the navbar
@@ -167,6 +151,22 @@ window.addEventListener('scroll', function() {
     
     lastScrollTop = scrollTop; // Update lastScrollTop
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
