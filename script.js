@@ -251,11 +251,13 @@ $(document).ready(function() {
     // Define an array of project IDs or URLs
     var projects = [
         'nuestra_casita.html',
-        'moco.html',
-        'temaki.html',
-        'unmei.html',
         'fire.html',
+        'moco.html',
+        'loopy.html',
+        'revival.html',
+        'tech_brochure.html',
         'exhibition_assets.html',
+        'temaki.html',
         'zine.html'
     ];
 
