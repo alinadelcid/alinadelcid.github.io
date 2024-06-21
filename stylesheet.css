@@ -432,28 +432,33 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+
+
        #portfolio {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             margin: 40px auto;
-            max-width: 1200px;
+            max-width: 1400px;                                  /*!!OLD SPACING FOR UX PORTFOLIO WAS 1200PX!!!*/
         }
-                                                        .tag { /* This is for the portfolio tags on home page */
-                                                            display: inline-block;
-                                                            padding: 5px 10px;
-                                                            background-color: #F0F0F0; /* Tag background color */
-                                                            color: #303030; /* Tag text color */
-                                                            border-radius: 5px; /* Rounded corners */
-                                                            font-size: 14px; /* Tag text size */
-                                                            margin-top: 10px; /* Spacing between tag and img */
-                                                            margin-right: 7px;
-                                                            margin-bottom: 3px;
-                                                            
-                                                            letter-spacing: 1px;
-                                                            font-weight: 400;     
-       
-                                                        }
+
+
+        .tag { /* This is for the portfolio tags on home page */
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #F0F0F0; /* Tag background color */
+            color: #303030; /* Tag text color */
+            border-radius: 5px; /* Rounded corners */
+            font-size: 14px; /* Tag text size */
+            margin-top: 10px; /* Spacing between tag and img */
+            margin-right: 7px;
+            margin-bottom: 3px;
+
+            letter-spacing: 1px;
+            font-weight: 400;     
+
+        }
 
         .portfolio-item {
             width: calc(50% - 20px); /*maybe this can count as a calculation lol?*/
@@ -497,15 +502,17 @@
     }
 
         
-        .body-wrapper
-{
-    /* ORIGINAL CODE opacity:0;*/                                  /*EXPERIMENTING HERE*/
+        .body-wrapper                   /*!!!THIS GIVES SPACING AROUND ALL BODY CONTENT!!!*/
+{    
+            /*margin: auto;                 THIS IS OLD SPACING WITH MORE MARGIN ACCORDING TO UX PORTFOLIOS
+            max-width: 950px;
+            padding-left: 70px;   
+            padding-right: 70px;*/
     
-    margin: auto; 
-    max-width: 950px;
-    
-    padding-left: 70px;   /*ADDED PADDING HERE SO NOW REMOVE PADDING FROM TEXT BLOCKS AND IMAGES*/
-    padding-right: 70px;
+            margin: auto; 
+            max-width: 1200px;
+            padding-left: 50px;   
+            padding-right: 50px;
     
 }
 
@@ -724,47 +731,62 @@
                                                   height: 1em;
 
                                                 }
-        
-        .image { /*This gives the spacing around the image*/
-            
-            /*margin-left: auto;
-            margin-right: auto;
-            max-width: 80ch;
-            text-align: justify;
-            padding-top: 30px;
-            padding-left: 70px;
-            padding-right: 70px;
-            padding-bottom: 0px;  ORIGINAL CODE */
-            
-            padding-top: 10px;
-            text-align: justify;            
-            
-        }
-
-        .image img{ /*This makes the image fit inside the div, for header images*/
-
-            height: 100%;
-            width: 100%; 
-        }
-
-        .body-image {/*This gives the spacing around the body image*/
     
-           /* margin-left: auto;
-            margin-right: auto;
-            max-width: 80ch;
-            padding-top: 13px; I changed this according to section with no <p> ..... */
-                        
-            padding-top: 13px; 
-            margin-bottom: 90px;
-            text-align: center;
-          }
 
-        .body-image img{ /*This makes the image fit inside the div, for body images*/
 
-            height: 100%;
-            width: 100%;  
-            margin-bottom: 10px;
-        }
+
+
+            .image { /*This gives the spacing around the image*/
+
+                 /*padding-top: 10px; Removing this fixed spacing issues with 2 column idk why*/
+                 /*text-align: justify; THIS WAS ONLY THING FOR OLD CODE UX PORTFOLIO*/ 
+
+                text-align: justify;
+            }
+
+            .image img, .body-image img { /*This makes the image fit inside the div, for header + body images*/
+                width: 100%;
+                height: 100%; /* Make images fill the container height */
+                object-fit: cover; /* Maintain aspect ratio and cover the container */
+                display: block; /* Remove any extra space at the bottom */
+            }
+
+            .body-image { /*This gives the spacing around the body image*/
+                padding-top: 13px;
+                margin-bottom: 90px;
+                text-align: center;
+            }
+
+            .body-image img { /*The image inside the div, for body images*/
+
+                margin-bottom: 25px; /*USED TO BE 10PX FOR UX PORTFOLIO*/
+            }
+
+            .inner-body-image-2col {
+                display: flex;
+                justify-content: space-between;
+                gap: 30px; /*USED TO BE 15PX FOR UX PORTFOLIO*/
+            }
+
+            .inner-body-image-2col .image {
+                flex: 1; /* Ensure both images take equal width */
+                overflow: hidden; /* Hide any overflow caused by object-fit: cover */
+            }
+
+            /* Responsive styles */
+            @media (max-width: 1281px), (max-width: 1025px), (max-width: 801px), (max-width: 792px), (max-width: 600px), (max-width: 480px), (max-width: 320px) {
+                .inner-body-image-2col {
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0px;
+                }
+            }
+
+
+
+
+
+
 
 
         .contact-form {
@@ -941,10 +963,17 @@
                   
         .body-wrapper
             {
-            margin: auto; 
+                
+            /*margin: auto;                 THIS IS OLD SPACING WITH MORE MARGIN ACCORDING TO UX PORTFOLIOS
             max-width: 950px;
-            padding-left: 70px;   /* Original is 70px */
-            padding-right: 70px;
+            padding-left: 70px;   
+            padding-right: 70px;*/
+    
+            margin: auto; 
+            max-width: 1200px;
+            padding-left: 50px;   
+            padding-right: 50px;    
+                
             }
 
                 }
@@ -962,9 +991,15 @@
             }
             .body-wrapper
             {
+           /* margin: auto;                  THIS IS OLD SPACING WITH MORE MARGIN ACCORDING TO UX PORTFOLIOS
+            padding-left: 40px;    
+            padding-right: 40px;*/
+                
+                
             margin: auto; 
-            padding-left: 40px;   
-            padding-right: 40px;
+            padding-left: 20px;    
+            padding-right: 20px;    
+                
             }
         }
     
@@ -995,10 +1030,17 @@
             }         
               .body-wrapper /*!!! body wrapping around portfolio pages content !!!*/
             {
-                margin: auto; 
+                /*margin: auto;                 THIS IS OLD SPACING WITH MORE MARGIN ACCORDING TO UX PORTFOLIOS
                 max-width: 950px;
                 padding-left: 40px;   
-                padding-right: 40px;
+                padding-right: 40px;*/
+                
+                
+                
+                margin: auto; 
+                max-width: 950px;
+                padding-left: 20px;   
+                padding-right: 20px;
             }
 
             
@@ -1040,10 +1082,17 @@
 
                               .body-wrapper /*!!! body wrapping around portfolio pages content !!!*/
                             {
-                                margin: auto; 
+                                /*margin: auto;         THIS IS OLD SPACING WITH MORE MARGIN ACCORDING TO UX PORTFOLIOS
                                 max-width: 950px;
                                 padding-left: 40px;   
-                                padding-right: 40px;
+                                padding-right: 40px;*/
+                                
+                                
+                                margin: auto; 
+                                max-width: 950px;
+                                padding-left: 20px;   
+                                padding-right: 20px;
+                                
                             }
                            
 
@@ -1090,10 +1139,16 @@
             }         
               .body-wrapper /*!!! body wrapping around portfolio pages content !!!*/
             {
-                margin: auto; 
-                max-width: 950px;
-                padding-left: 40px;   
-                padding-right: 40px;
+            /*margin: auto;         THIS IS OLD SPACING WITH MORE MARGIN ACCORDING TO UX PORTFOLIOS
+            max-width: 950px;
+            padding-left: 40px;   
+            padding-right: 40px;*/
+
+
+            margin: auto; 
+            max-width: 950px;
+            padding-left: 20px;   
+            padding-right: 20px;
             }
         }
     
@@ -1128,7 +1183,7 @@
             
 
             .about-page-text {
-              margin-top: 100px;
+            margin-top: 100px;
             margin-left: auto;
             margin-right: auto;
             max-width: 80ch;
@@ -1141,10 +1196,16 @@
             
               .body-wrapper /*!!! body wrapping around portfolio pages content !!!*/
             {
-                margin: auto; 
-                max-width: 950px;
-                padding-left: 40px;   
-                padding-right: 40px;
+            /*margin: auto;         THIS IS OLD SPACING WITH MORE MARGIN ACCORDING TO UX PORTFOLIOS
+            max-width: 950px;
+            padding-left: 40px;   
+            padding-right: 40px;*/
+
+
+            margin: auto; 
+            max-width: 950px;
+            padding-left: 20px;   
+            padding-right: 20px;
             }
 
         .pagination button {
@@ -1206,7 +1267,7 @@
             
      
             .about-page-text {
-         margin-top: 100px;
+            margin-top: 100px;
             margin-left: auto;
             margin-right: auto;
             max-width: 80ch;
@@ -1219,10 +1280,16 @@
             
             .body-wrapper /*!!! body wrapping around portfolio pages content !!!*/
             {
-                margin: auto; 
-                max-width: 950px;
-                padding-left: 30px;   
-                padding-right: 30px;
+            /*margin: auto;         THIS IS OLD SPACING WITH MORE MARGIN ACCORDING TO UX PORTFOLIOS
+            max-width: 950px;
+            padding-left: 30px;   
+            padding-right: 30px;*/
+
+
+            margin: auto; 
+            max-width: 950px;
+            padding-left: 10px;   
+            padding-right: 10px;
             }
             
             .pagination button {

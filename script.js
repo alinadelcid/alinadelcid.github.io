@@ -257,8 +257,7 @@ $(document).ready(function() {
         'revival.html',
         'tech_brochure.html',
         'exhibition_assets.html',
-        'temaki.html',
-        'zine.html'
+        'temaki.html'
     ];
 
     // Get the current project URL
